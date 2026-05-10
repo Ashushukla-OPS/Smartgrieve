@@ -1,3 +1,5 @@
+
+const departmentRoutes = require("./routes/department.route");
 const express = require("express")
 const UserModel = require("./models/user.model")
 const app = express()
@@ -18,7 +20,7 @@ app.use(express.json())
 
 app.use("/api/auth/", router)
 app.use("/api/complaint", ComplaintRouter)
-
+app.use("/api/departments", departmentRoutes);
 app.use("/api/mycomplaint",ComplaintRouter)
 app.use("/api/complaint/", ComplaintRouter)
 

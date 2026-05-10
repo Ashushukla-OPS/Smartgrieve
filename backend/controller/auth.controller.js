@@ -49,9 +49,10 @@ user
     })}
 
   catch(error){
-   return res.status(500).res({
+   return res.status(500).json({
     success:false,
-    message:"server error you can't  register"
+    message:"server error you can't  register",
+    error:error.message
    })
   }
 
